@@ -14,11 +14,12 @@ namespace CovidDashboard
 
             // Add services to the container.
             builder.Services.AddRazorPages();
+            //register custom dataaccess services
+            ServiceExtension.AddServices(builder.Services);
 
             var app = builder.Build();
 
-            //register custom dataaccess services
-            ServiceExtension.AddServices(builder.Services);
+
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
