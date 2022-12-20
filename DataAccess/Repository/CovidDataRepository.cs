@@ -1,5 +1,6 @@
 ﻿using DataAccess.Entities;
 using DataAccess.IRepository;
+using DataAccess.Utilitiy;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,12 +16,12 @@ namespace DataAccess.Repository
             throw new NotImplementedException();
         }
 
-        public IQueryable<CovidData> GetAll()
+        public List<CovidData> GetAll()
         {
-            throw new NotImplementedException();
+            return DataReaderUtil.ReadDummyCovidDataset();            
         }
 
-        public IQueryable<CovidData> GetByQuery(Delegate @delegate)
+        public List<CovidData> GetByQuery(Delegate @delegate)
         {
             throw new NotImplementedException();
         }

@@ -9,8 +9,8 @@ namespace DataAccess.IRepository
 {
     public interface IBaseRepository<T>
     {
-        IQueryable<T> GetAll();
-        IQueryable<T> GetByQuery(Delegate @delegate);
+        List<T> GetAll();
+        List<T> GetByQuery(Delegate @delegate);
         void Add(T entity);
     }
 }

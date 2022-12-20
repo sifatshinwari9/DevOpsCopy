@@ -16,7 +16,7 @@ namespace CovidDashboard
             builder.Services.AddRazorPages();
             //register custom dataaccess services
             ServiceExtension.AddServices(builder.Services);
-
+            
             var app = builder.Build();
 
 
@@ -29,8 +29,9 @@ namespace CovidDashboard
                 app.UseHsts();
             }
 
+            
             app.UseHttpsRedirection();
-            app.UseStaticFiles();
+            app.UseStaticFiles();            
 
             app.UseRouting();
 
