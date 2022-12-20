@@ -1,3 +1,9 @@
+using CovidDashboard.Extensions;
+using DataAccess.Entities;
+using DataAccess.IRepository;
+using DataAccess.Repository;
+using Microsoft.Extensions.DependencyInjection.Extensions;
+
 namespace CovidDashboard
 {
     public class Program
@@ -10,6 +16,9 @@ namespace CovidDashboard
             builder.Services.AddRazorPages();
 
             var app = builder.Build();
+
+            //register custom dataaccess services
+            ServiceExtension.AddServices(builder.Services);
 
             // Configure the HTTP request pipeline.
             if (!app.Environment.IsDevelopment())
