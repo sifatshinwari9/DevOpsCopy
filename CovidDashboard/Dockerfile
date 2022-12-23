@@ -7,7 +7,7 @@ EXPOSE 443
 
 FROM mcr.microsoft.com/dotnet/sdk:6.0 AS build
 WORKDIR /src
-COPY ["CovidDashboard.csproj", "CovidDashboard/"]
+COPY ["./CovidDashboard/CovidDashboard.csproj", "CovidDashboard/"]
 COPY ["./DataAccess/DataAccess.csproj", "DataAccess/"]
 RUN dotnet restore "CovidDashboard/CovidDashboard.csproj"
 COPY . .

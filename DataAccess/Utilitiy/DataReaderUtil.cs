@@ -18,7 +18,7 @@ namespace DataAccess.Utilitiy
             
             List<CovidData> dataset = new List<CovidData>();
 
-            using (var package = new ExcelPackage(new FileInfo(Path.Combine(Environment.CurrentDirectory, @"Assets\covid_dataset.xlsx"))))
+            using (var package = new ExcelPackage(new FileInfo(Path.Combine(Environment.CurrentDirectory, @"Assets/covid_dataset.xlsx"))))
             {
                 var sheet = package.Workbook.Worksheets[0];
                 int xx = sheet.Rows.EndRow;
