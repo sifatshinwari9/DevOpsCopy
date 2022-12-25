@@ -1,7 +1,3 @@
-using CovidDashboard.Extensions;
-using DataAccess.Entities;
-using DataAccess.IRepository;
-using DataAccess.Repository;
 using Microsoft.Extensions.DependencyInjection.Extensions;
 
 namespace CovidDashboard
@@ -15,7 +11,6 @@ namespace CovidDashboard
             // Add services to the container.
             builder.Services.AddRazorPages();
             //register custom dataaccess services
-            ServiceExtension.AddServices(builder.Services);
             
             var app = builder.Build();
 
