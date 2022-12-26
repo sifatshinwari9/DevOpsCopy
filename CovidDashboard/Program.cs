@@ -7,12 +7,13 @@ namespace CovidDashboard
         public static void Main(string[] args)
         {
             var builder = WebApplication.CreateBuilder(args);
+            
 
             // Add services to the container.
             builder.Services.AddRazorPages();
             //register custom dataaccess services
             
-            var app = builder.Build();
+            var app = builder.Build();            
 
 
 
@@ -37,7 +38,7 @@ namespace CovidDashboard
 
             app.UseAuthorization();
 
-            app.MapRazorPages();
+            app.MapRazorPages();            
 
             app.Run();
         }
